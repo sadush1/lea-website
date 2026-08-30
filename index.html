@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEA — Little Explorer of Albania</title>
+<meta name="description" content="Meet Lea, a little flamingo taking children on an adventure through Albania's nature, history and culture.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ SKIP LINK ============ -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ FLIGHT PATH (decorative, travels behind sections) ============ -->
+<svg class="flight-path" width="0" height="0">
+  <defs>
+    <path id="flight-path-def" d="M 40 0 C 120 200, -40 420, 60 640 S 180 1000, 40 1200"/>
+  </defs>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="LEA home">
+      <span class="brand-icon" aria-hidden="true">
+        <svg viewBox="0 0 60 60" width="34" height="34">
+          <circle cx="30" cy="30" r="30" fill="var(--cream-deep)"/>
+          <g transform="translate(11,10)">
+            <path d="M20 4C11 4 6 12 7 21c0.6 5 3.4 8.6 7.6 10.8C13.6 34 12.8 36.4 12.8 39c0 3.6 3 6.3 7 6.3s7.4-3 8.6-7.4c3.6-1.4 6.6-4.6 7.3-9.6C36.8 18.6 31 4 20 4z" fill="var(--pink)"/>
+            <circle cx="15.5" cy="15" r="1.6" fill="var(--ink)"/>
+            <path d="M9 18c-4 1-7 4.5-7.6 8.4" stroke="var(--terracotta)" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </span>
+      <span class="brand-word">Lea<span class="brand-word-sub">Little Explorer of Albania</span></span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Primary">
+      <a href="#meet-lea">Meet Lea</a>
+      <a href="#book">The Book</a>
+      <a href="#explore">Explore Albania</a>
+      <a href="#passport">Passport</a>
+      <a href="#parents">For Parents</a>
+      <a href="#educators">For Educators</a>
+      <a href="#partners">For Partners</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-switch" type="button" aria-label="Change language">
+        <span class="lang-active">EN</span><span class="lang-sep">/</span><span class="lang-inactive">AL</span>
+      </button>
+      <a href="#book" class="btn btn-primary btn-small">Explore Lea's World</a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ 1. HERO ============ -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-scene" aria-hidden="true">
+      <svg viewBox="0 0 1400 900" preserveAspectRatio="xMidYMax slice" class="hero-svg">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F4E3D3"/>
+            <stop offset="45%" stop-color="#E9CFD8"/>
+            <stop offset="100%" stop-color="#BFDCE6"/>
+          </linearGradient>
+          <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#3E7C93"/>
+            <stop offset="100%" stop-color="#1F4E5F"/>
+          </linearGradient>
+          <linearGradient id="mtnFar" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#8FA8AE"/>
+            <stop offset="100%" stop-color="#6C8C8F"/>
+          </linearGradient>
+          <linearGradient id="mtnNear" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#4F7566"/>
+            <stop offset="100%" stop-color="#365647"/>
+          </linearGradient>
+          <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FBEBC9" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#FBEBC9" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+
+        <!-- sky -->
+        <rect x="0" y="0" width="1400" height="900" fill="url(#sky)"/>
+        <circle cx="1150" cy="170" r="220" fill="url(#sun)"/>
+        <circle cx="1150" cy="170" r="60" fill="#FCEFCE"/>
+
+        <!-- far mountains -->
+        <path d="M0 420 L120 300 L230 380 L360 260 L500 400 L650 300 L800 410 L950 320 L1100 400 L1250 330 L1400 410 L1400 500 L0 500 Z" fill="url(#mtnFar)" opacity="0.65"/>
+
+        <!-- near mountains (Albanian Alps) -->
+        <path d="M-20 520 L150 340 L280 460 L430 300 L560 470 L700 360 L860 500 L1020 380 L1180 500 L1350 400 L1420 480 L1420 620 L-20 620 Z" fill="url(#mtnNear)"/>
+
+        <!-- ancient ruin silhouette (castle on hill) -->
+        <g transform="translate(210,470)" fill="#2E4A3D" opacity="0.9">
+          <path d="M0 90 L0 40 L14 40 L14 20 L26 20 L26 40 L40 40 L40 10 L52 10 L52 40 L66 40 L66 20 L78 20 L78 40 L92 40 L92 90 Z"/>
+          <rect x="30" y="55" width="10" height="35"/>
+        </g>
+
+        <!-- river winding to sea -->
+        <path d="M520 900 C560 760, 480 700, 560 610 C630 540, 700 560, 760 500" fill="none" stroke="#DCE9E4" stroke-width="26" stroke-linecap="round" opacity="0.55"/>
+
+        <!-- sea + coastline -->
+        <path d="M0 660 C220 610, 420 700, 700 650 C980 600, 1180 690, 1400 640 L1400 900 L0 900 Z" fill="url(#sea)"/>
+        <path d="M0 660 C220 610, 420 700, 700 650 C980 600, 1180 690, 1400 640" fill="none" stroke="#EAF3F1" stroke-width="4" opacity="0.5"/>
+
+        <!-- wetland reeds foreground -->
+        <g stroke="#3B6650" stroke-width="4" stroke-linecap="round" opacity="0.75">
+          <path d="M60 900 C50 800, 70 760, 55 700"/>
+          <path d="M95 900 C100 810, 80 770, 95 715"/>
+          <path d="M130 900 C120 800, 145 760, 130 705"/>
+          <path d="M1300 900 C1290 800, 1315 760, 1300 705"/>
+          <path d="M1340 900 C1350 810, 1330 770, 1345 715"/>
+        </g>
+
+        <!-- flock of small flamingos far -->
+        <g fill="none" stroke="#C96A82" stroke-width="4" stroke-linecap="round" opacity="0.7">
+          <path d="M960 560 q10 -12 20 0 q10 -12 20 0"/>
+          <path d="M1010 580 q8 -10 16 0 q8 -10 16 0"/>
+          <path d="M900 590 q8 -10 16 0 q8 -10 16 0"/>
+        </g>
+
+        <!-- LEA flying (hero character) -->
+        <g class="lea-fly" transform="translate(770,300) scale(1.55)">
+          <g transform="rotate(-8)">
+            <!-- wing back -->
+            <path d="M-6 10 C-46 -6 -70 10 -86 40 C-58 34 -30 34 -8 26 Z" fill="#C96A82"/>
+            <!-- body -->
+            <path d="M0 0 C22 2 34 22 28 42 C24 60 8 70 -8 68 C-24 66 -34 52 -30 36 C-27 22 -16 -1 0 0 Z" fill="#E9A0B2"/>
+            <path d="M0 0 C22 2 34 22 28 42 C24 60 8 70 -8 68 C-24 66 -34 52 -30 36 C-27 22 -16 -1 0 0 Z" fill="none" stroke="#C96A82" stroke-width="1.5" opacity="0.4"/>
+            <!-- wing front -->
+            <path d="M-4 14 C-40 4 -58 22 -68 48 C-42 46 -18 42 2 30 Z" fill="#F1B4C4"/>
+            <!-- neck -->
+            <path d="M-6 4 C-28 -14 -46 -34 -44 -58 C-43 -70 -34 -78 -24 -76" fill="none" stroke="#E9A0B2" stroke-width="13" stroke-linecap="round"/>
+            <!-- head -->
+            <circle cx="-27" cy="-79" r="11" fill="#EFAABB"/>
+            <!-- beak -->
+            <path d="M-36 -76 C-46 -74 -52 -70 -55 -65 C-49 -64 -42 -65 -35 -68 Z" fill="#3B3540"/>
+            <path d="M-36 -76 C-46 -74 -52 -70 -55 -65" fill="none" stroke="#2B2630" stroke-width="1.4"/>
+            <!-- eye -->
+            <circle cx="-29" cy="-82" r="2.1" fill="#2B2630"/>
+            <!-- crest feather -->
+            <path d="M-24 -90 C-20 -96 -14 -98 -10 -96" fill="none" stroke="#C96A82" stroke-width="2.4" stroke-linecap="round"/>
+            <!-- legs trailing -->
+            <path d="M-6 66 C0 82 6 92 4 106" fill="none" stroke="#D98A5F" stroke-width="3" stroke-linecap="round"/>
+            <path d="M-14 64 C-16 80 -12 92 -16 104" fill="none" stroke="#D98A5F" stroke-width="3" stroke-linecap="round"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <div class="wrap hero-copy">
+      <p class="eyebrow-plain">A children's storybook brand</p>
+      <h1 class="hero-title">Meet Lea.<br>Discover Albania.</h1>
+      <p class="hero-sub">A little flamingo with a big adventure — helping children discover Albania's nature, history and stories.</p>
+      <div class="hero-ctas">
+        <a href="#explore" class="btn btn-primary">Explore Lea's World</a>
+        <a href="#book" class="btn btn-ghost">Meet the First Book</a>
+      </div>
+    </div>
+    <div class="hero-fade" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============ 2. MEET LEA ============ -->
+  <section class="section band-cream" id="meet-lea">
+    <div class="wrap two-col two-col--reverse">
+      <div class="col-media">
+        <svg viewBox="0 0 420 460" class="lea-portrait" aria-hidden="true">
+          <ellipse cx="210" cy="430" rx="140" ry="18" fill="#DCC9A8" opacity="0.5"/>
+          <!-- grass -->
+          <g stroke="#7FA97E" stroke-width="5" stroke-linecap="round">
+            <path d="M60 420 C58 400 66 388 62 372"/>
+            <path d="M80 424 C84 402 74 392 80 376"/>
+            <path d="M340 420 C344 398 334 390 340 372"/>
+            <path d="M362 424 C358 402 368 392 360 378"/>
+          </g>
+          <!-- small flowers -->
+          <g fill="#D98A5F"><circle cx="100" cy="410" r="4"/><circle cx="112" cy="416" r="4"/></g>
+          <g fill="#E9A0B2"><circle cx="320" cy="414" r="4"/><circle cx="330" cy="408" r="4"/></g>
+
+          <!-- Lea standing -->
+          <g transform="translate(140,60)">
+            <!-- back leg -->
+            <path d="M112 250 C114 290 108 320 116 350" fill="none" stroke="#D98A5F" stroke-width="6" stroke-linecap="round"/>
+            <ellipse cx="118" cy="352" rx="12" ry="4" fill="#D98A5F"/>
+            <!-- front leg -->
+            <path d="M96 252 C90 292 96 322 86 352" fill="none" stroke="#E39A66" stroke-width="6" stroke-linecap="round"/>
+            <ellipse cx="86" cy="354" rx="12" ry="4" fill="#E39A66"/>
+            <!-- tail feathers -->
+            <path d="M118 200 C150 210 164 230 158 254 C138 246 122 232 112 214 Z" fill="#E39FB0"/>
+            <!-- body -->
+            <path d="M40 130 C20 170 26 220 66 246 C100 266 140 254 150 216 C158 184 140 132 96 118 C74 112 52 112 40 130 Z" fill="#EFAABB"/>
+            <path d="M40 130 C20 170 26 220 66 246 C100 266 140 254 150 216 C158 184 140 132 96 118 C74 112 52 112 40 130 Z" fill="none" stroke="#D98394" stroke-width="1.5" opacity="0.5"/>
+            <!-- wing detail -->
+            <path d="M56 150 C46 178 50 206 74 224" fill="none" stroke="#DD8FA1" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
+            <!-- neck -->
+            <path d="M58 128 C40 100 26 74 40 46 C48 28 68 18 84 24" fill="none" stroke="#EFAABB" stroke-width="22" stroke-linecap="round"/>
+            <!-- head -->
+            <circle cx="92" cy="22" r="19" fill="#F1B4C4"/>
+            <!-- crest -->
+            <path d="M84 4 C78 -8 66 -14 54 -10" fill="none" stroke="#C96A82" stroke-width="4" stroke-linecap="round"/>
+            <path d="M92 2 C90 -10 82 -18 70 -18" fill="none" stroke="#C96A82" stroke-width="4" stroke-linecap="round"/>
+            <!-- beak -->
+            <path d="M75 30 C58 34 46 40 38 50 C50 54 64 52 76 46 Z" fill="#3B3540"/>
+            <path d="M75 30 C58 34 46 40 38 50" fill="none" stroke="#2B2630" stroke-width="2"/>
+            <!-- eye -->
+            <circle cx="86" cy="18" r="3.6" fill="#2B2630"/>
+            <circle cx="87.4" cy="16.6" r="1.1" fill="#fff"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col-text">
+        <p class="eyebrow-plain">The character</p>
+        <h2>Hello, little explorer!</h2>
+        <p class="lead">I'm Lea. I have pink feathers, curious eyes and a big love for Albania.</p>
+        <p>Come with me. There are mountains to climb, rivers to follow, ancient stories to discover and beautiful places waiting to be explored.</p>
+        <a href="#book" class="text-link">Meet Lea in her first story →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. FIRST BOOK ============ -->
+  <section class="section band-sky" id="book">
+    <div class="wrap two-col">
+      <div class="col-media">
+        <div class="book-mock">
+          <svg viewBox="0 0 320 420" class="book-cover" aria-hidden="true">
+            <defs>
+              <linearGradient id="bookSky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#F4E3D3"/>
+                <stop offset="100%" stop-color="#BFDCE6"/>
+              </linearGradient>
+            </defs>
+            <rect width="320" height="420" rx="10" fill="url(#bookSky)"/>
+            <rect x="0" y="290" width="320" height="130" fill="#3E7C93"/>
+            <path d="M0 290 C60 270 120 300 180 282 C240 266 280 288 320 274 L320 300 L0 300 Z" fill="#1F4E5F" opacity="0.85"/>
+            <g stroke="#3B6650" stroke-width="4" stroke-linecap="round" opacity="0.8">
+              <path d="M24 400 C18 370 30 350 22 320"/>
+              <path d="M48 402 C54 372 42 354 50 322"/>
+              <path d="M280 400 C286 370 274 352 282 322"/>
+            </g>
+            <g transform="translate(150,230) scale(0.85)" fill="#C96A82">
+              <path d="M0 0 C22 2 34 22 28 42 C24 60 8 70 -8 68 C-24 66 -34 52 -30 36 C-27 22 -16 -1 0 0 Z"/>
+            </g>
+            <g transform="translate(150,230) scale(0.85)">
+              <path d="M-6 4 C-28 -14 -46 -34 -44 -58 C-43 -70 -34 -78 -24 -76" fill="none" stroke="#E9A0B2" stroke-width="13" stroke-linecap="round"/>
+              <circle cx="-27" cy="-79" r="11" fill="#EFAABB"/>
+              <path d="M-36 -76 C-46 -74 -52 -70 -55 -65 C-49 -64 -42 -65 -35 -68 Z" fill="#2B2630"/>
+            </g>
+            <g fill="#E9A0B2" opacity="0.9">
+              <path d="M60 90 q10 -14 20 0 q10 -14 20 0" fill="none" stroke="#C96A82" stroke-width="3"/>
+              <path d="M220 70 q8 -12 16 0 q8 -12 16 0" fill="none" stroke="#C96A82" stroke-width="3"/>
+            </g>
+            <text x="160" y="45" text-anchor="middle" class="book-title-line1">LEA</text>
+            <text x="160" y="70" text-anchor="middle" class="book-title-line2">and the Flamingos of Albania</text>
+            <rect x="14" y="14" width="292" height="392" rx="6" fill="none" stroke="#fff" stroke-width="2" opacity="0.35"/>
+          </svg>
+          <span class="tag tag-live">Available Now</span>
+        </div>
+      </div>
+      <div class="col-text">
+        <p class="eyebrow-plain">The first adventure</p>
+        <h2>Lea and the Flamingos of Albania</h2>
+        <p class="lead">Lea discovers a beautiful wetland where flamingos rest, feed and raise their little ones.</p>
+        <p>When their home needs protection, children and grown-ups come together to speak up for nature. A gentle story about wonder, wetlands and why they matter — for little explorers aged 3–8.</p>
+        <a href="#" class="btn btn-primary">Discover the Book</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. EXPLORE ALBANIA CATEGORIES ============ -->
+  <section class="section band-cream" id="explore">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow-plain">A country full of stories</p>
+        <h2>Explore Albania with Lea</h2>
+        <p class="lead">Five doors into the same beautiful country — pick one and start wandering.</p>
+      </div>
+
+      <div class="category-grid">
+        <article class="category-card cat-nature">
+          <span class="category-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M24 6C14 6 8 16 8 26c0 10 7 16 16 16s16-6 16-16C40 16 34 6 24 6Z" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M24 42V22M24 22c-6 0-10-4-10-10M24 22c6 0 10-6 10-12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Nature</h3>
+          <p>Discover Albania's rivers, forests, wetlands and wildlife.</p>
+        </article>
+        <article class="category-card cat-history">
+          <span class="category-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M8 18 24 8l16 10M10 18v20M18 18v20M30 18v20M38 18v20M6 38h36" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>History</h3>
+          <p>Travel through ancient cities, castles and stories from long ago.</p>
+        </article>
+        <article class="category-card cat-mountains">
+          <span class="category-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M4 38 17 18l7 10 6-8 14 18Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M14 24l3 4 3-3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Mountains</h3>
+          <p>Explore the Albanian Alps and the animals that call them home.</p>
+        </article>
+        <article class="category-card cat-sea">
+          <span class="category-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M4 20c4-4 8-4 12 0s8 4 12 0 8-4 12 0M4 30c4-4 8-4 12 0s8 4 12 0 8-4 12 0M4 40c4-4 8-4 12 0s8 4 12 0 8-4 12 0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </span>
+          <h3>The Sea</h3>
+          <p>Discover Albania's beautiful coastline and marine life.</p>
+        </article>
+        <article class="category-card cat-culture">
+          <span class="category-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48"><path d="M24 6c8 6 8 14 0 20-8-6-8-14 0-20Z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 26v16M14 42h20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Culture</h3>
+          <p>Meet Albanian traditions, food, language, music and everyday life.</p>
+        </article>
+      </div>
+      <p class="section-note">Each destination will grow into its own stories, sounds and activities — <span class="tag tag-soon">Coming Soon</span></p>
+    </div>
+  </section>
+
+  <!-- ============ 5. THE LEA ADVENTURES (series) ============ -->
+  <section class="section band-white" id="series">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow-plain">The series</p>
+        <h2>The Lea Adventures</h2>
+        <p class="lead">One flamingo, eight journeys across Albania — a growing shelf of stories to collect.</p>
+      </div>
+
+      <div class="shelf" role="list">
+        <!-- Book 1 - live -->
+        <div class="shelf-book" role="listitem" style="--spine:#E9A0B2;--cover:#F4E3D3;">
+          <div class="spine-cover">
+            <svg viewBox="0 0 140 190"><rect width="140" height="190" fill="#F4E3D3"/><rect y="140" width="140" height="50" fill="#1F4E5F" opacity="0.85"/><circle cx="70" cy="95" r="14" fill="#C96A82"/></svg>
+          </div>
+          <p class="shelf-title">Lea and the Flamingos of Albania</p>
+          <span class="tag tag-live">Available Now</span>
+        </div>
+        <div class="shelf-book" role="listitem" style="--spine:#9FB6C7;">
+          <div class="spine-cover placeholder"><span>2</span></div>
+          <p class="shelf-title">Lea and the Secret of the Mountains</p>
+          <span class="tag tag-soon">Coming Soon</span>
+        </div>
+        <div class="shelf-book" role="listitem" style="--spine:#8FBFA6;">
+          <div class="spine-cover placeholder"><span>3</span></div>
+          <p class="shelf-title">Lea and the Wild River</p>
+          <span class="tag tag-soon">Coming Soon</span>
+        </div>
+        <div class="shelf-book" role="listitem" style="--spine:#D9A15D;">
+          <div class="spine-cover placeholder"><span>4</span></div>
+          <p class="shelf-title">Lea Travels Through Time</p>
+          <span class="tag tag-soon">Coming Soon</span>
+        </div>
+        <div class="shelf-book" role="listitem" style="--spine:#C4A5CE;">
+          <div class="spine-cover placeholder"><span>5</span></div>
+          <p class="shelf-title">Lea and the Castle in the Clouds</p>
+          <span class="tag tag-soon">Coming Soon</span>
+        </div>
+        <div class="shelf-book" role="listitem" style="--spine:#6FB3C0;">
+          <div class="spine-cover placeholder"><span>6</span></div>
+          <p class="shelf-title">Lea Discovers the Blue Coast</p>
+          <span class="tag tag-soon">Coming Soon</span>
+        </div>
+        <div class="shelf-book" role="listitem" style="--spine:#C1622E;">
+          <div class="spine-cover placeholder"><span>7</span></div>
+          <p class="shelf-title">Lea Meets the Eagle</p>
+          <span class="tag tag-soon">Coming Soon</span>
+        </div>
+        <div class="shelf-book" role="listitem" style="--spine:#4B7A5B;">
+          <div class="spine-cover placeholder"><span>8</span></div>
+          <p class="shelf-title">Lea's Big Journey Around Albania</p>
+          <span class="tag tag-soon">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. EXPLORER PASSPORT ============ -->
+  <section class="section band-terracotta" id="passport">
+    <div class="wrap two-col two-col--reverse">
+      <div class="col-media">
+        <svg viewBox="0 0 380 300" class="passport-mock" aria-hidden="true">
+          <g transform="translate(30,10) rotate(-4)">
+            <rect width="230" height="280" rx="10" fill="#1F4E5F"/>
+            <rect x="10" y="10" width="210" height="260" rx="6" fill="none" stroke="#E9C88E" stroke-width="1.5"/>
+            <circle cx="115" cy="110" r="34" fill="none" stroke="#E9C88E" stroke-width="2.5"/>
+            <path d="M100 118c4 4 8 4 12 0M108 100c4-4 8-4 12 0" stroke="#E9C88E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <text x="115" y="180" text-anchor="middle" class="passport-title">ALBANIA</text>
+            <text x="115" y="200" text-anchor="middle" class="passport-sub">EXPLORER PASSPORT</text>
+          </g>
+          <g transform="translate(150,40) rotate(5)">
+            <rect width="200" height="250" rx="10" fill="#F4E3D3" stroke="#1F4E5F" stroke-width="1.5"/>
+            <circle cx="60" cy="60" r="24" fill="none" stroke="#C96A82" stroke-width="2" stroke-dasharray="3 3"/>
+            <text x="60" y="65" text-anchor="middle" class="stamp-text">NARTA</text>
+            <circle cx="140" cy="90" r="22" fill="none" stroke="#4B7A5B" stroke-width="2" stroke-dasharray="3 3"/>
+            <text x="140" y="95" text-anchor="middle" class="stamp-text">BUTRINT</text>
+            <circle cx="70" cy="150" r="22" fill="none" stroke="#D98A5F" stroke-width="2" stroke-dasharray="3 3"/>
+            <text x="70" y="155" text-anchor="middle" class="stamp-text">BERAT</text>
+          </g>
+        </svg>
+      </div>
+      <div class="col-text col-text--onterracotta">
+        <p class="eyebrow-plain">Coming soon</p>
+        <h2>Become an Albania Explorer</h2>
+        <p class="lead">Children can collect stamps and stickers as they discover different places, animals and stories.</p>
+        <ul class="chip-list" aria-label="Example destinations">
+          <li>Narta</li><li>Vjosa</li><li>Butrint</li><li>Berat</li><li>Gjirokastër</li><li>Krujë</li><li>Shkodër</li><li>Albanian Alps</li><li>Albanian Riviera</li>
+        </ul>
+        <a href="#" class="btn btn-inverse">Start Exploring <span class="tag tag-soon tag-on-dark">Coming Soon</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. EXPLORER BOX ============ -->
+  <section class="section band-cream" id="explorer-box">
+    <div class="wrap two-col">
+      <div class="col-media">
+        <svg viewBox="0 0 380 320" class="box-mock" aria-hidden="true">
+          <path d="M40 140 190 90 340 140 340 250 190 300 40 250Z" fill="#E9C88E"/>
+          <path d="M40 140 190 190 190 300 40 250Z" fill="#D9A15D"/>
+          <path d="M340 140 190 190 190 300 340 250Z" fill="#CE9A62"/>
+          <path d="M40 140 190 90 340 140 190 190Z" fill="#F4E3D3"/>
+          <g transform="translate(160,110)">
+            <path d="M0 0 C22 2 34 22 28 42 C24 60 8 70 -8 68 C-24 66 -34 52 -30 36 C-27 22 -16 -1 0 0 Z" fill="#E9A0B2" transform="scale(0.6)"/>
+          </g>
+          <rect x="140" y="20" width="20" height="70" rx="3" fill="#F4E3D3" transform="rotate(-8 150 55)"/>
+          <rect x="215" y="15" width="16" height="55" rx="3" fill="#BFDCE6" transform="rotate(10 223 42)"/>
+          <circle cx="255" cy="60" r="14" fill="#C96A82" opacity="0.85"/>
+        </svg>
+      </div>
+      <div class="col-text">
+        <p class="eyebrow-plain">Coming soon</p>
+        <h2>One box. A whole country to discover.</h2>
+        <p class="lead">A premium keepsake box bringing the whole Lea world home in one place.</p>
+        <ul class="check-list">
+          <li>Storybook</li><li>Explorer Passport</li><li>Illustrated Albania map</li><li>Discovery cards</li><li>Activity book</li><li>Stickers</li><li>Lea character piece</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Discover the Explorer Box <span class="tag tag-soon">Coming Soon</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. NATURE MISSION ============ -->
+  <section class="section band-forest" id="mission">
+    <div class="wrap mission-wrap">
+      <p class="eyebrow-plain eyebrow-on-dark">Our mission</p>
+      <h2 class="mission-title">Little explorers can make a big difference.</h2>
+      <p class="mission-lead">Lea teaches children that Albania's nature is home to birds, animals, plants and people — and that caring for it is everyone's responsibility.</p>
+      <p class="mission-statement">Explore it. Love it. Protect it.</p>
+      <p class="mission-note">As Lea's world grows, we hope to support real nature education and conservation efforts in Albania. Partnerships will be announced here once they exist.</p>
+    </div>
+  </section>
+
+  <!-- ============ 9. FOR PARENTS ============ -->
+  <section class="section band-white" id="parents">
+    <div class="wrap two-col two-col--reverse">
+      <div class="col-media">
+        <svg viewBox="0 0 340 300" aria-hidden="true" class="parents-illustration">
+          <ellipse cx="170" cy="270" rx="140" ry="16" fill="#EFE6D4"/>
+          <g transform="translate(90,40)">
+            <path d="M0 0 C22 2 34 22 28 42 C24 60 8 70 -8 68 C-24 66 -34 52 -30 36 C-27 22 -16 -1 0 0 Z" fill="#EFAABB"/>
+            <path d="M-6 4 C-28 -14 -46 -34 -44 -58 C-43 -70 -34 -78 -24 -76" fill="none" stroke="#E9A0B2" stroke-width="13" stroke-linecap="round"/>
+            <circle cx="-27" cy="-79" r="11" fill="#F1B4C4"/>
+            <path d="M-36 -76 C-46 -74 -52 -70 -55 -65 C-49 -64 -42 -65 -35 -68 Z" fill="#2B2630"/>
+          </g>
+          <g transform="translate(190,120)" opacity="0.9">
+            <circle r="34" fill="#BFDCE6"/>
+            <path d="M-14 -6 8 -6M-14 4 12 4M-14 14 4 14" stroke="#1F4E5F" stroke-width="3" stroke-linecap="round"/>
+          </g>
+          <g transform="translate(240,190)" opacity="0.9">
+            <circle r="26" fill="#D9A15D"/>
+            <path d="M-4 -10 L-4 10 M-11 0 4 -10" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none"/>
+          </g>
+        </svg>
+      </div>
+      <div class="col-text">
+        <p class="eyebrow-plain">For parents</p>
+        <h2>More than a story. A first connection with Albania.</h2>
+        <p class="lead">Lea helps children discover geography, nature, history, culture, language and environmental responsibility — without making it feel like homework.</p>
+        <p>The stories are written primarily for little explorers aged 3–8, while parents and grandparents can enjoy rediscovering Albania right alongside them.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10. FOR SCHOOLS & EDUCATORS ============ -->
+  <section class="section band-sky" id="educators">
+    <div class="wrap two-col">
+      <div class="col-media">
+        <div class="future-card">
+          <ul class="future-list">
+            <li>Classroom story packs</li>
+            <li>Activity sheets</li>
+            <li>Maps</li>
+            <li>Nature lessons</li>
+            <li>History activities</li>
+            <li>Albania Explorer passports</li>
+            <li>Bilingual materials</li>
+          </ul>
+          <span class="tag tag-future">Future Vision</span>
+        </div>
+      </div>
+      <div class="col-text">
+        <p class="eyebrow-plain">For schools & educators</p>
+        <h2>Bring Albania into the classroom.</h2>
+        <p class="lead">Lea's world is being built to travel into classrooms — in Albania and everywhere Albanian children live.</p>
+        <a href="#newsletter" class="btn btn-secondary">For Educators</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 11. FOR HOTELS & TOURISM ============ -->
+  <section class="section band-white" id="partners">
+    <div class="wrap two-col two-col--reverse">
+      <div class="col-media">
+        <div class="future-card future-card--blue">
+          <ul class="future-list">
+            <li>Mini storybooks</li>
+            <li>Explorer passports</li>
+            <li>Illustrated maps</li>
+            <li>Stickers</li>
+            <li>Activity packs</li>
+          </ul>
+          <span class="tag tag-future">Future Vision</span>
+        </div>
+      </div>
+      <div class="col-text">
+        <p class="eyebrow-plain">For hotels & tourism</p>
+        <h2>Give little travellers their own Albanian adventure.</h2>
+        <p class="lead">The Lea Explorer Hotel Kit will let hotels and tourism partners offer young guests a real cultural experience — not just a toy.</p>
+        <a href="#newsletter" class="btn btn-secondary">Partner with Lea</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 12. NEWSLETTER ============ -->
+  <section class="section band-pink" id="newsletter">
+    <div class="wrap newsletter-wrap">
+      <h2>Join Lea's Adventure</h2>
+      <p class="lead">Be the first to hear about new stories, activities, products and adventures from Albania.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="text" name="first-name" placeholder="First name" aria-label="First name" required>
+        <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
+        <button type="submit" class="btn btn-primary">Join the Adventure</button>
+      </form>
+      <p class="form-status" id="formStatus" role="status"></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <svg viewBox="0 0 60 60" width="40" height="40" aria-hidden="true">
+        <g transform="translate(11,10)">
+          <path d="M20 4C11 4 6 12 7 21c0.6 5 3.4 8.6 7.6 10.8C13.6 34 12.8 36.4 12.8 39c0 3.6 3 6.3 7 6.3s7.4-3 8.6-7.4c3.6-1.4 6.6-4.6 7.3-9.6C36.8 18.6 31 4 20 4z" fill="#EFAABB"/>
+        </g>
+      </svg>
+      <p>LEA — Little Explorer of Albania<br><span>Discover Albania. Love Nature. Explore the Story.</span></p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer">
+      <div>
+        <h4>Explore</h4>
+        <a href="#meet-lea">Lea</a>
+        <a href="#series">Books</a>
+        <a href="#explore">Explore Albania</a>
+        <a href="#passport">Explorer Passport</a>
+        <a href="#explorer-box">Explorer Box</a>
+      </div>
+      <div>
+        <h4>For You</h4>
+        <a href="#parents">For Parents</a>
+        <a href="#educators">For Educators</a>
+        <a href="#partners">For Partners</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#meet-lea">About Lea</a>
+        <a href="#newsletter">Contact</a>
+        <a href="#" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© 2026 LEA — Little Explorer of Albania. A brand prototype in progress.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
